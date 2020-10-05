@@ -15,7 +15,7 @@ Setup
 
 Run
 ---
-`webdriver-manager update`
+`node node_modules/protractor/bin/webdriver-manager update`
 
 `webdriver-manager start`
 
