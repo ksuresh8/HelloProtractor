@@ -1,9 +1,10 @@
 # Hello Protractor
 Basic Test Framework with Protractor-Jasmine-TypeScript-NodeJS.
 
-Steps to build and run
+Steps to Setup & Run
 ----------------------
-Build
+
+Setup
 -----
 `npm i -D jasmine nyc ts-node typescript protractor`
 
