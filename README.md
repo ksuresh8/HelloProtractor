@@ -1,5 +1,5 @@
 # Hello Protractor
-Basic Test Framework with Protractor Jasmine Typescript NodeJS.
+Basic Test Framework with Protractor-Jasmine-TypeScript-NodeJS.
 
 Steps to build and run
 ----------------------
