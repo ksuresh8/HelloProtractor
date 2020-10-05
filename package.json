@@ -1,12 +1,17 @@
 {
-  "name": "Hello Protractor",
+  "name": "helloprotractor",
   "version": "1.0.0",
   "description": "Basic Test Framework with Protractor-Jasmine-TypeScript-NodeJS",
   "main": "index.js",
   "scripts": {
-    "test" : "protractor protractor.conf.js"
+    "test": "protractor protractor.conf.js"
   },
-  "keywords": ["protractor","jasmine","typescript","nodejs"],
+  "keywords": [
+    "protractor",
+    "jasmine",
+    "typescript",
+    "nodejs"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
