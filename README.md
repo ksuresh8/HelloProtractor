@@ -9,6 +9,12 @@ Build
 
 `npm i -D @types/jasmine`
 
+`npm i -g webdriver-manager`
+
+`webdriver-manager update`
+
+`webdriver-manager start`
+
 Run
 ---
 `npm run proc`
