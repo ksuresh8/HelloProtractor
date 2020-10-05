@@ -11,10 +11,11 @@ Build
 
 `npm i -g webdriver-manager`
 
+
+Run
+---
 `webdriver-manager update`
 
 `webdriver-manager start`
 
-Run
----
 `npm run proc`
