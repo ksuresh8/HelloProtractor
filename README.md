@@ -11,4 +11,4 @@ Build
 
 Run
 ---
-`nmp run proc`
+`npm run proc`
