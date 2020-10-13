@@ -20,7 +20,7 @@ describe('async function', function() {
 		expect((await todoList.get(1).getText())).toEqual('build an AngularJS app');
 	  }
 	});
-  });*/
+  });
 
 describe('Protractor Demo App', function () {
 
@@ -49,4 +49,4 @@ describe('Protractor Demo App', function () {
 		browser.switchTo().alert().accept();
 
 	});
-});
+});*/
