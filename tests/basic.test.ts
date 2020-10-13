@@ -1,6 +1,6 @@
 import { browser, element, by, By, $, $$, ExpectedConditions } from 'protractor';
 
-describe('Protractor Typescript Demo', function() {
+/*describe('Protractor Typescript Demo', function() {
 	it('title verifications', function() {
 		console.log("Running first test case....");
 			browser.get('https://angularjs.org/');
@@ -20,7 +20,7 @@ describe('async function', function() {
 		expect((await todoList.get(1).getText())).toEqual('build an AngularJS app');
 	  }
 	});
-  });
+  });*/
 
 describe('Protractor Demo App', function () {
 
