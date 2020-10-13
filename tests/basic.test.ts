@@ -29,7 +29,9 @@ describe('Protractor Demo App', function () {
 		browser.driver.get('http://www.way2automation.com/angularjs-protractor/banking/#/');
 		expect(await browser.getTitle()).toEqual('Protractor practice website - Banking App');
 		element(by.buttonText('Bank Manager Login')).click();
+		browser.sleep(1000);
 		element(by.buttonText('Open Account')).click();
+		browser.sleep(1000);
 
 		//Drop down selection  using option's visibility text 
 		element(by.model('currency')).element(by.css("[value='Dollar']")).click();
@@ -38,10 +40,12 @@ describe('Protractor Demo App', function () {
 		// element(by.model('currency')).$('[value="Dollar"]').click();
 
 		//To select using index
+		browser.sleep(1000);
 		var select = element(by.id('userSelect'));
+		browser.sleep(1000);
 		select.$('[value="1"]').click(); // To select using the index .$ means a shortcut to .By.css
 		element(by.buttonText("Process")).click();
-		browser.sleep(7500);// wait in miliseconds
+		browser.sleep(3000);// wait in miliseconds
 		browser.switchTo().alert().accept();
 
 	});
