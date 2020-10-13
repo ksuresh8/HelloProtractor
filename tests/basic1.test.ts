@@ -33,7 +33,8 @@ describe('E2E Automation', function () {
     browser.sleep(2000);
     element(by.tagName('button.btn.btn-default')).click().then(function() {
       browser.sleep(5000);
-      expect<any>(element(by.tagName('span.error.ng-binding'))).toEqual("Deposit Successful");
+      var msg = element(by.tagName('span.error.ng-binding'));
+      expect<any>(msg.getText()).toEqual('Deposit Successful');
     });
  })
 
