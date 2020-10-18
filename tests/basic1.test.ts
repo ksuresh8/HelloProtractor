@@ -35,7 +35,13 @@ describe('E2E Automation', function () {
       browser.sleep(5000);
       var msg = element(by.tagName('span.error.ng-binding'));
       expect<any>(msg.getText()).toEqual('Deposit Successful');
-    });
+       expect<any>(element(by.cssContainingText('Balance','500')));
+       element(by.buttonText('withdrawl')).click();
+       element(by.model('amount')).sendKeys('200');
+       element(by.buttonText('Withdraw')).click;
+
+     })
+
  })
 
 });
