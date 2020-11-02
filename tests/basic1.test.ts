@@ -32,13 +32,23 @@ describe('E2E Automation', function () {
     element(by.model('amount')).sendKeys("200");
     browser.sleep(2000);
     //browser.sleep(2000);
-    element(by.css('[ng-click="withdrawl()"]')).click();
-    element(by.model('amount')).sendKeys('100');
-    browser.sleep(2000);
     element(by.className('btn btn-default')).click();
     browser.sleep(5000);
-    element(by.css('[ng-click="transactions()"]')).click();
+    element(by.buttonText("Withdrawl")).click();
+    //element(by.css('[ng-click="withdrawl()"]')).click();
     browser.sleep(2000);
+    element(by.model('amount')).sendKeys('100');
+    browser.sleep(2000);
+    element(by.buttonText("Withdraw")).click();
+    browser.sleep(5000);
+
+    var msg = element(by.className('error ng-binding'));
+    expect<any>(msg.getText()).toEqual('Transaction successful');
+    msg.getText().then(function (text) {
+      console.log(text);
+    });
+    //element(by.css('[ng-click="transactions()"]')).click();
+    //browser.sleep(2000);
     //element(by.model("amount")).sendKeys("500");
     //element(by.class("btn btn-default")).click();
  })
