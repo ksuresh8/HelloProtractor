@@ -41,11 +41,19 @@ describe('E2E Automation', function () {
     browser.sleep(2000);
     element(by.buttonText("Withdraw")).click();
     browser.sleep(5000);
-
     var msg = element(by.className('error ng-binding'));
     expect<any>(msg.getText()).toEqual('Transaction successful');
     msg.getText().then(function (text) {
       console.log(text);
+      element(by.buttonText("Transactions")).click();
+      browser.sleep(5000);
+      //element(by.type("datetime-local")).click();
+      //element(by.id("start")).sendKeys('2021-03-15T12:39:36');
+      //element(by.id("end")).sendKeys('2021-03-15T12:39:43');
+      browser.sleep(500);
+      element(by.buttonText("Back")).click();
+      //element(by.id("start")).sendKeys('2021-2-18');
+      browser.sleep(500);
     });
     //element(by.css('[ng-click="transactions()"]')).click();
     //browser.sleep(2000);
