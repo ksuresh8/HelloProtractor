@@ -1,4 +1,5 @@
 import { browser, element, by, By, $, $$, ExpectedConditions } from 'protractor';
+import { DriverProvider } from 'protractor/built/driverProviders';
 
 // E2E scenarios for banking application
 
@@ -7,6 +8,7 @@ import { browser, element, by, By, $, $$, ExpectedConditions } from 'protractor'
 describe('E2E Automation', function () {
   it('this will launch the application', function () {
     browser.get('http://www.way2automation.com/angularjs-protractor/banking/#/login');
+    browser.navigate().refresh;
     browser.manage().window().maximize();
     browser.sleep(5000);
   })
@@ -24,6 +26,7 @@ describe('E2E Automation', function () {
     var s1 = element(by.id('userSelect'));
     s1.$(('[value="2"]')).click();
     browser.sleep(2000);
+    element(by.buttonText('Login')).isEnabled();
     element(by.buttonText('Login')).click();
     browser.sleep(2000);
     console.log('logged in sucess');
@@ -52,8 +55,12 @@ describe('E2E Automation', function () {
       //element(by.id("end")).sendKeys('2021-03-15T12:39:43');
       browser.sleep(500);
       element(by.buttonText("Back")).click();
-      //element(by.id("start")).sendKeys('2021-2-18');
+      element(by.buttonText('Logout')).click();
       browser.sleep(500);
+      //element(by.id("start")).sendKeys('2021-2-18');
+      element(by.buttonText('Home')).click();
+      browser.sleep(500);
+      //browser.close();
     });
     //element(by.css('[ng-click="transactions()"]')).click();
     //browser.sleep(2000);
