@@ -28,27 +28,35 @@ describe("This test case validates the manager login",function(){
    element(by.model('lName')).sendKeys('kanth');
    element(by.model('postCd')).sendKeys('500090');
    element(by.className('btn btn-default')).click();
-   browser.sleep(5000);
-   let ale: Alert = browser.switchTo().alert();
+   browser.sleep(2000);
+   let ale:Alert = browser.switchTo().alert();
    //element(by.name("OK")).click();
    //let ale: Alert = browser.switchTo().alert();
-   ale.getText();
-   ale.accept();
-   browser.sleep(2000);
-   element(by.buttonText('Open Account')).click();
-   var select = element(by.model('custId'));
-    select.$('[value="6"]').click();
-   //element.all(by.id('userSelect')).element(by.model('custId')).
-   //var size =element.all(by.model('currency')).getSize();
-   //console.log(size);
-   var select1 = element(by.model('currency'));
-   select1.$('[value="Rupee"]').click();
-   browser.sleep(2000);
-   element(by.buttonText('Process')).click();
-   let ale1:Alert = browser.switchTo().alert();
-   ale1.getText();
-   ale1.accept();
-   browser.sleep(2000);
+   ale.getText().then(function (text) {
+      console.log(text);
+      var n = text.indexOf(":") + 1;
+      var newstr = text.substring(n);
+      ale.accept();
+      browser.sleep(2000);
+      element(by.buttonText('Open Account')).click();
+      var select = element(by.model('custId'));
+       select.$('[value="'+newstr+'"]').click();
+      //element.all(by.id('userSelect')).element(by.model('custId')).
+      //var size =element.all(by.model('currency')).getSize();
+      //console.log(size);
+      var select1 = element(by.model('currency'));
+      select1.$('[value="Rupee"]').click();
+      browser.sleep(2000);
+      element(by.buttonText('Process')).click();
+      let ale1:Alert = browser.switchTo().alert();
+      ale1.getText();
+      ale1.accept();
+      browser.sleep(2000);
+      element(by.buttonText('Customers')).click();
+      element(by.model('searchCustomer')).sendKeys('sri');
+      browser.sleep(10000);
+   });
+  
    //popupAlert.accept();
    });
    
