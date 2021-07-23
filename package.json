@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jasmine": "^3.5.14",
-    "jasmine": "^3.6.1",
+    "jasmine": "^3.8.0",
     "nyc": "^15.1.0",
     "promise": "^8.1.0",
     "protractor": "^7.0.0",
