@@ -2,8 +2,7 @@ exports.config = {
         framework: 'jasmine', //Type of Framework used 
         seleniumAddress: 'http://localhost:4444/wd/hub',
         //directConnect:true, 
-        specs: ['tests/**/*[tT]est.ts',
-      'tests/Manager.test.ts'], //Name of the Specfile 
+        specs: ['tests/**/*[tT]est.ts', 'tests/Manager.test.ts'], //Name of the Specfile 
       
         onPrepare() { 
               require('ts-node').register({ 
